@@ -3,12 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Match_Cook</title>
-    <!-- Sadece bir tane viewport meta tag! -->
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+    <title>Unity Web Player | CemYilmaz-TaskProject</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 100%; height: 100%; background: #231F20"></canvas>
+    <canvas id="unity-canvas" width=435 height=390 tabindex="-1" style="width: 435px; height: 390px; background: #231F20"></canvas>
     <script src="Build/Match3Builds.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -22,9 +20,9 @@
         canvas.style.width = "100%";
         canvas.style.height = "100%";
         canvas.style.position = "fixed";
+
         document.body.style.textAlign = "left";
       }
-
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
         dataUrl: "Build/Match3Builds.data.unityweb",
