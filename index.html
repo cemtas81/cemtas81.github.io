@@ -5,37 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gorilli Games - Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Small inline styles for the Play Store preview card (so you don't have to edit style.css) -->
-  <style>
-    /* Play Store preview card */
-    .playstore-preview { margin: 24px auto; display: flex; justify-content: center; padding: 0 12px; }
-    .ps-card {
-      width: 320px;
-      border: 1px solid #ececec;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform .12s ease, box-shadow .12s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .ps-card:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(0,0,0,0.10); }
-    .ps-thumb { width: 100%; height: 180px; object-fit: cover; display: block; background: #f6f6f6; }
-    .ps-overlay { padding: 12px; text-align: left; }
-    .ps-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; }
-    .ps-sub { color: #666; font-size: 0.92rem; margin-bottom: 8px; }
-    .ps-badge { height: 32px; display: inline-block; }
-    @media (max-width: 420px) {
-      .ps-card { width: 92%; }
-      .ps-thumb { height: 150px; }
-    }
-  </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Gorilli Games Logo" class="logo">
     <nav>
+      <a href="#playstore-games">Play Store</a>
       <a href="#about">About</a>
       <a href="#games">Playable Games</a>
       <a href="#pc-games">PC Games</a>
@@ -45,9 +20,27 @@
   </header>
 
   <main>
+    <!-- NEW: Play Store Games section (first so nav scrolls here like other sections) -->
+    <section id="playstore-games" class="card playstore-preview" aria-label="Gorilli Games on Google Play">
+      <div class="ps-grid">
+        <a class="ps-card-link" href="https://play.google.com/store/apps/developer?id=Gorilli+Games"
+           target="_blank" rel="noopener noreferrer" aria-label="Gorilli Games on Google Play">
+          <article class="ps-card" role="button" tabindex="0">
+            <!-- Replace logo.png with a dedicated horizontal thumbnail if you have one -->
+            <img src="logo.png" alt="Gorilli Games preview" class="ps-thumb">
+            <div class="ps-overlay">
+              <div class="ps-title">Gorilli Games</div>
+              <div class="ps-sub">Tüm oyunlar — Google Play</div>
+              <img class="ps-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play">
+            </div>
+          </article>
+        </a>
+        <!-- Optional: add more cards here for individual apps (use direct Play Store app links) -->
+      </div>
+    </section>
+
     <section id="about" class="card">
       <h1>About Me</h1>
-      <!-- FIX: Wrapped each paragraph in its own <p> tag -->
       <p>
         Hi, I'm Cem YILMAZ a Unity game developer at <strong>Gorilli Games</strong>.
       </p>
@@ -55,7 +48,6 @@
         With over five years of hands-on experience, I specialize in transforming creative game concepts into engaging, high-performance experiences across 2D, 3D, WebGL, XR , and mobile platforms.
       </p>
       <p>
-         <!-- FIX: Wrapped each pointer in a span to color it -->
         <span style="color: #19fff2;">🔹</span> Game Development: Building immersive, scalable, and polished games from the ground up using SOLID OOP principles and clean, reusable code.<br>
         <span style="color: #19fff2;">🔹</span> Optimization: Enhancing performance and efficiency to ensure smooth gameplay on diverse platforms.<br>
         <span style="color: #19fff2;">🔹</span> Cross-Platform Solutions: Developing for PC, mobile, web, and interactive kiosks, delivering seamless multi-device experiences.<br>
@@ -124,13 +116,11 @@
       <div class="assets-grid">
         <div class="asset-item">
           <h3>Open World Hack&Slash</h3>
-          <!-- FIX: Made responsive -->
           <iframe src="https://www.youtube.com/embed/31aKcRl42ig" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
           <p>A Fast-paced Hack'n Slash Game which is up to 1000 enemy units with navigation/avoidance.</p>
         </div>
         <div class="asset-item">
           <h3>Color Maze Puzzle with Mystery </h3>
-          <!-- FIX: Added /embed/ to URL and made responsive -->
           <iframe src="https://www.youtube.com/embed/NMakyOjBbIc" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
           <p>3D Color Maze Game with Challenging Mysteries/Obstacles and Various Skins</p>
         </div>
@@ -165,27 +155,10 @@
       <h2>Game Assets</h2>
       <div class="assets-grid" id="assets-list">       
         <div class="asset-item">
-         <!-- FIX: Made responsive -->
          <iframe src="https://www.youtube.com/embed/R0SmPE_PUdM" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
           <p>Asset Video - Office Animals 3D</p>
         </div>
       </div>
-    </section>
-
-    <!-- Play Store small preview + clickable link -->
-    <section id="playstore" class="playstore-preview" aria-label="Gorilli Games on Google Play">
-      <a href="https://play.google.com/store/apps/developer?id=Gorilli+Games"
-         target="_blank" rel="noopener noreferrer" aria-label="Gorilli Games on Google Play">
-        <div class="ps-card" role="button" tabindex="0">
-          <!-- Thumbnail: using repo logo.png by default; replace with a custom screenshot if you prefer -->
-          <img src="logo.png" alt="Gorilli Games preview" class="ps-thumb">
-          <div class="ps-overlay">
-            <div class="ps-title">Gorilli Games</div>
-            <div class="ps-sub">Tüm oyunlar — Google Play</div>
-            <img class="ps-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play">
-          </div>
-        </div>
-      </a>
     </section>
 
   </main>
