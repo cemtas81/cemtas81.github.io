@@ -3,194 +3,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gorilli Games - Portfolio</title>
+  <title>Cem Yılmaz | Lead Unity Developer, DOTS &amp; Compute Shaders</title>
+  <meta name="description" content="Cem Yılmaz, Lead Unity Developer at Bleis Interactive (Ankara). 6+ years across mobile, PC, WebGL, VR and kiosk. Unity DOTS/ECS and GPGPU specialist: 3M+ unit RTS simulations, 75K+ NPC frameworks, 10+ published games. Playable WebGL demos and CV.">
+  <meta name="author" content="Cem Yılmaz">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cemtas81.github.io/">
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Cem Yılmaz | Lead Unity Developer, DOTS &amp; Compute Shaders">
+  <meta property="og:description" content="Unity DOTS/ECS and GPGPU specialist with 6+ years of experience. Playable WebGL demos, PC, VR and kiosk projects, 10+ published games.">
+  <meta property="og:url" content="https://cemtas81.github.io/">
+  <meta property="og:image" content="https://cemtas81.github.io/logo.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Cem">
+  <meta property="profile:last_name" content="Yılmaz">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cem Yılmaz | Lead Unity Developer">
+  <meta name="twitter:description" content="Unity DOTS/ECS and GPGPU specialist. 3M+ unit RTS simulations, 75K+ NPC frameworks, 10+ published games.">
+  <meta name="twitter:image" content="https://cemtas81.github.io/logo.png">
+
+  <!-- Structured data for search engines and AI crawlers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cem Yılmaz",
+    "givenName": "Cem",
+    "familyName": "Yılmaz",
+    "jobTitle": "Lead Unity Developer",
+    "description": "Unity game developer with 6+ years of experience across mobile, PC, WebGL, VR and kiosk platforms. Specialized in Unity DOTS (ECS, Job System, Burst) and GPGPU programming with Compute Shaders.",
+    "url": "https://cemtas81.github.io/",
+    "image": "https://cemtas81.github.io/logo.png",
+    "email": "mailto:cemtas81@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ankara",
+      "addressCountry": "TR"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Bleis Interactive"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Anadolu University" }
+    ],
+    "knowsAbout": [
+      "Unity", "C#", "Unity DOTS", "Entity Component System", "Job System", "Burst Compiler",
+      "Compute Shaders", "GPGPU", "WebGL", "Mobile Game Development", "VR", "AR", "Interactive Kiosks",
+      "Unreal Engine", "Zenject", "UniTask", "Shader Graph", "Unity ML-Agents", "Agile", "Scrum"
+    ],
+    "knowsLanguage": ["tr", "en", "zh"],
+    "sameAs": [
+      "https://www.linkedin.com/in/cem-yılmaz-870501114",
+      "https://github.com/cemtas81",
+      "https://play.google.com/store/apps/developer?id=Gorilli+Games"
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Gorilli Games Logo" class="logo">
-    <nav>
-      <a href="#playstore-games">Play Store</a>
+    <a href="#top" class="brand" aria-label="Home">
+      <img src="logo.png" alt="Gorilli Games logo" class="logo">
+    </a>
+    <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#games">Playable Games</a>
       <a href="#pc-games">PC Games</a>
       <a href="#vr-kiosk">VR/Kiosk</a>
-      <a href="#assets">Game Assets</a>
+      <a href="#assets">Tech Demos</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <!-- Play Store small preview + clickable link (compact version, English text) -->
-<section id="playstore-games" class="card playstore-preview" aria-label="Gorilli Games on Google Play">
-  <div class="ps-grid">
-    <a class="ps-card-link" href="https://play.google.com/store/apps/developer?id=Gorilli+Games"
-       target="_blank" rel="noopener noreferrer" aria-label="Gorilli Games on Google Play">
-      <article class="ps-card" role="button" tabindex="0">
-        <!-- Thumbnail: using repo logo.png by default; replace with a horizontal screenshot if available -->
-        <img src="logo.png" alt="Gorilli Games preview" class="ps-thumb">
-        <div class="ps-overlay">
-          <div class="ps-title">Gorilli Games</div>
-          <div class="ps-sub">All games — Google Play</div>
-          <img class="ps-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play">
-        </div>
-      </article>
-    </a>
-  </div>
-</section>
+  <main id="top">
 
-    <section id="about" class="card">
-      <h1>About Me</h1>
-      <p>
-        Hi, I'm Cem YILMAZ a Unity game developer at <strong>Gorilli Games</strong>.
+    <!-- Hero: name, title, contact -->
+    <section id="hero" class="card hero">
+      <h1>Cem Yılmaz</h1>
+      <p class="hero-title">Lead Unity Developer · Unity DOTS/ECS &amp; Compute Shaders · Ankara, Türkiye</p>
+      <p class="hero-summary">
+        6+ years building mobile, PC, WebGL, VR and kiosk experiences. Currently leading a 7-person team
+        at <strong>Bleis Interactive</strong>. Known for massive-scale simulations: 3,000,000+ units on the GPU,
+        75,000+ NPCs with Unity DOTS, 10+ games shipped on Google Play.
       </p>
-      <p>
-        With over five years of hands-on experience, I specialize in transforming creative concepts into engaging, high-performance experiences across 2D, 3D, WebGL, XR, and mobile platforms.
-        My focus is on pushing the boundaries of what’s possible through deep technical optimization and modern architecture.
-      </p>
-      <p>
-        <span style="color: #19fff2;">🔹</span> Game Development & Architecture: Building immersive, scalable, and polished games from the ground up using SOLID OOP principles and Data-Oriented Design.<br>
-        <span style="color: #19fff2;">🔹</span> High-Performance Systems (DOTS/ECS): Expert in Unity DOTS (Entity Component System) and Compute Shaders. 
-        I specialize in building GPU-driven pipelines capable of managing millions of active entities with zero-latency performance.<br>
-        <span style="color: #19fff2;">🔹</span> Optimization: Enhancing performance and efficiency to ensure smooth gameplay on diverse platforms.<br>
-        <span style="color: #19fff2;">🔹</span> Cross-Platform Solutions: Developing for PC, mobile, web, and interactive kiosks, delivering seamless multi-device experiences.<br>
-        <span style="color: #19fff2;">🔹</span> Publishing: Successfully launching games on Google Play Store, App Store, and Steam
-      </p>
-      <p>
-        Explore my work below!
-      </p>
+      <div class="contact-bar" id="contact">
+        <a href="mailto:cemtas81@gmail.com">✉ cemtas81@gmail.com</a>
+        <a href="https://www.linkedin.com/in/cem-yılmaz-870501114" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/cemtas81" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="Cem_Yilmaz_CV.pdf" target="_blank" rel="noopener" download>Download CV (PDF)</a>
+        <a href="https://play.google.com/store/apps/developer?id=Gorilli+Games" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </div>
     </section>
 
-   <section id="games" class="card">
-  <h2>Playable Games</h2>
-  <div class="games-grid" id="games-list">
-    <!-- Game 1: Match3 (commented out) -->
-    <!--
-    <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
-      <h3>Match3 Game</h3>
-      <iframe 
-        src="Match3Builds/index.html" 
-        title="Match3 Game" 
-        style="width: 100%; height: 100%; min-height: 400px; border: 0;"
-        allowfullscreen loading="lazy">
-      </iframe>
-      <p>A demo of my Match3 game.</p>
-    </div>
-    -->
-       <!-- YouTube Shorts Video -->
-    <div class="game-item" style="width: 100%; max-width: 400px; margin: 30px auto;">
-      <h3>🎮 Gameplay Showcase</h3>
-      <!-- Sabit yükseklik ile container -->
-      <div style="width: 100%; height: 640px; background: #000; border-radius: 8px; overflow: hidden; position: relative;">
-        <iframe 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-          src="https://www.youtube.com/embed/0_pbJQ1nvWg"
-          title="Gorilli Games - Gameplay Showcase" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+    <!-- Play Store small preview -->
+    <section id="playstore-games" class="card playstore-preview" aria-label="Gorilli Games on Google Play">
+      <div class="ps-grid">
+        <a class="ps-card-link" href="https://play.google.com/store/apps/developer?id=Gorilli+Games"
+           target="_blank" rel="noopener noreferrer" aria-label="Gorilli Games on Google Play">
+          <article class="ps-card">
+            <img src="logo.png" alt="Gorilli Games developer page on Google Play" class="ps-thumb">
+            <div class="ps-overlay">
+              <div class="ps-title">Gorilli Games</div>
+              <div class="ps-sub">10+ published games on Google Play</div>
+              <img class="ps-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play">
+            </div>
+          </article>
+        </a>
       </div>
-      <p>Watch our latest game in action!</p>
-    </div>
-    <!-- Game 2: Parking Jam -->
-    <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
-      <h3>Parking Jam</h3>
-      <iframe 
-        src="ParkingJam/index.html" 
-        title="Parking Jam" 
-        style="width: 100%; height: 100%; min-height: 400px; border: 0;"
-        allowfullscreen loading="lazy">
-      </iframe>
-      <p>A fun and challenging parking puzzle game made with Unity WebGL. Try to get all the cars out without getting stuck!</p>
-    </div>
-    <!-- Game 3: Card Match -->
-    <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
-      <h3>Card Match</h3>
-      <iframe 
-        src="CardMatch/index.html" 
-        title="Card Match" 
-        style="width: 100%; height: 100%; min-height: 400px; border: 0;"
-        allowfullscreen loading="lazy">
-      </iframe>
-      <p>Simple card match game, match all cards in time.</p>
-    </div>
-    <!-- Game 4: Match&Cook -->
-    <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
-      <h3>Match&Cook</h3>
-      <iframe 
-        src="WebBuild/index.html" 
-        title="Match_Cook Game" 
-        style="width: 100%; height: 100%; min-height: 400px; border: 0;"
-        allowfullscreen loading="lazy">
-      </iframe>
-      <p>A demo of my Match&Cook game.</p>
-    </div>
-  </div>
-</section>
+    </section>
 
-     <!-- NEW SECTION: PC Games -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I am a Unity developer with over six years of hands-on experience, currently <strong>Lead Unity Developer at Bleis Interactive</strong>,
+        where I lead a 7-person team and manage the end-to-end development of four mobile games: architecture, code reviews,
+        performance optimization, sprint planning and Google Play / App Store releases.
+      </p>
+      <p>
+        My specialty is performance at scale. I build GPU-driven pipelines with Compute Shaders and Unity DOTS (ECS, Job System, Burst)
+        that keep millions of active entities interactive, and I apply the same discipline to mobile titles where every millisecond counts.
+      </p>
+      <ul class="skills">
+        <li><strong>Architecture:</strong> SOLID OOP, Data-Oriented Design, Zenject, UniTask, Unity ML-Agents prototypes</li>
+        <li><strong>High-performance systems:</strong> Unity DOTS (ECS, Job System, Burst Compiler), Compute Shaders / GPGPU, Shader Graph</li>
+        <li><strong>Platforms:</strong> Android, iOS, PC (Steam), WebGL, VR/AR, interactive kiosks</li>
+        <li><strong>Shipping:</strong> 10+ games on Google Play, App Store and Steam releases, full publishing cycle</li>
+        <li><strong>Workflow:</strong> Agile/Scrum, Git, Claude Code, Cursor, Unity MCP, Blender MCP</li>
+      </ul>
+      <h3>Experience</h3>
+      <ul class="timeline">
+        <li><span class="when">2026 – present</span> <strong>Bleis Interactive</strong>, Lead Unity Developer. 7-person team, 4 mobile games in production.</li>
+        <li><span class="when">2021 – 2025</span> <strong>SITULA Informatics</strong>, Unity Game Developer. 5 interactive museum projects for the Gallipoli Historical Site (iOS, Android, VR, kiosk).</li>
+        <li><span class="when">2020 – present</span> <strong>Freelance</strong>, Unity Game Developer. GPGPU RTS system (3M+ units), DOTS NPC framework (75K+ NPCs), 10+ published mobile games, Steam puzzle title.</li>
+      </ul>
+    </section>
+
+    <section id="games" class="card">
+      <h2>Playable Games (WebGL)</h2>
+      <p class="section-intro">Play directly in the browser. All builds are Unity WebGL, exported from the same codebase used for the mobile releases.</p>
+      <div class="games-grid" id="games-list">
+        <div class="game-item" style="width: 100%; max-width: 400px; margin: 30px auto;">
+          <h3>🎮 Gameplay Showcase</h3>
+          <div style="width: 100%; height: 640px; background: #000; border-radius: 8px; overflow: hidden; position: relative;">
+            <iframe
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+              src="https://www.youtube.com/embed/0_pbJQ1nvWg"
+              title="Gorilli Games gameplay showcase video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <p>Short gameplay reel of recent mobile releases published under Gorilli Games.</p>
+        </div>
+        <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
+          <h3>Parking Jam</h3>
+          <iframe
+            src="ParkingJam/index.html"
+            title="Parking Jam, playable Unity WebGL build"
+            style="width: 100%; height: 100%; min-height: 400px; border: 0;"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <p class="meta">Role: solo developer · Tech: Unity, C#, WebGL · Published on Google Play</p>
+          <p>Car-parking puzzle: clear the lot without blocking any car. Grid-based movement logic, level generator and a WebGL build optimized for fast load.</p>
+        </div>
+        <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
+          <h3>Card Match</h3>
+          <iframe
+            src="CardMatch/index.html"
+            title="Card Match, playable Unity WebGL build"
+            style="width: 100%; height: 100%; min-height: 400px; border: 0;"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <p class="meta">Role: solo developer · Tech: Unity, C#, WebGL</p>
+          <p>Timed memory card game. Object pooling, state-driven UI and audio muting for embedded play.</p>
+        </div>
+        <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
+          <h3>Match &amp; Cook</h3>
+          <iframe
+            src="WebBuild/index.html"
+            title="Match and Cook, playable Unity WebGL build"
+            style="width: 100%; height: 100%; min-height: 400px; border: 0;"
+            allowfullscreen loading="lazy">
+          </iframe>
+          <p class="meta">Role: solo developer · Tech: Unity, C#, WebGL</p>
+          <p>Match-3 with a cooking meta layer: matched ingredients feed recipes and unlock levels. Demo build of the mobile game.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="pc-games" class="card">
       <h2>PC Games</h2>
       <div class="assets-grid">
         <div class="asset-item">
-          <h3>Open World Hack&Slash</h3>
-          <iframe src="https://www.youtube.com/embed/31aKcRl42ig" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
-          <p>A Fast-paced Hack'n Slash Game which is up to 1000 enemy units with navigation/avoidance.</p>
+          <h3>Open World Hack &amp; Slash</h3>
+          <iframe src="https://www.youtube.com/embed/31aKcRl42ig" title="Open World Hack and Slash gameplay video" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
+          <p class="meta">Role: solo developer · Tech: Unity, C#, NavMesh, DOTS</p>
+          <p>Fast-paced action prototype running up to 1,000 enemy units simultaneously with navigation and avoidance, without dropping frames.</p>
         </div>
         <div class="asset-item">
-          <h3>Color Maze Puzzle with Mystery </h3>
-          <iframe src="https://www.youtube.com/embed/NMakyOjBbIc" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
-          <p>3D Color Maze Game with Challenging Mysteries/Obstacles and Various Skins</p>
+          <h3>Color Maze Puzzle with Mystery</h3>
+          <iframe src="https://www.youtube.com/embed/NMakyOjBbIc" title="Color Maze Puzzle gameplay video" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
+          <p class="meta">Role: solo developer · Tech: Unity, C# · Platform: Steam</p>
+          <p>Space-themed 3D maze puzzle with hidden mechanics, obstacles, a skin and item shop. Full Steam publishing cycle handled end to end.</p>
         </div>
       </div>
     </section>
 
-<!-- NEW SECTION: Vr-Kiosk -->
-   <section id="vr-kiosk" class="card">
-  <h2>VR & Kiosk Projects</h2>
-  <div class="assets-grid">
-    <div class="asset-item">
-      <h3>VR Project</h3>
-      <iframe src="https://www.youtube.com/embed/DvBHgOJslgk" style="width:100%; aspect-ratio: 16/9; border:0;" allowfullscreen loading="lazy"></iframe>
-      <p>Kilitbahir Stronghold VR tour</p>
-    </div>
-    <div class="asset-item">
-      <h3>Kiosk Project 1</h3>
-      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973711734532390912?compact=1"
-        style="width: 100%; min-height: 450px; border: 0;" allowfullscreen="" title="Gömülü gönderi" loading="lazy"></iframe>
-      <p>War History Research Center, Dardanelles, Gallipoli, First World War, Ottoman to Turkish Translator / screenshot mailing</p>
-    </div>
-    <div class="asset-item">
-      <h3>Kiosk Project 2</h3>
-      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973710806240636928?compact=1" 
-        style="width: 100%; min-height: 450px; border: 0;" allowfullscreen="" title="Gömülü gönderi" loading="lazy"></iframe>
-      <p>War History Research Center, Dardanelles, Gallipoli, First World War, map database / inspection</p>
-    </div>
-  </div>
-</section>
+    <section id="vr-kiosk" class="card">
+      <h2>VR &amp; Kiosk Projects</h2>
+      <p class="section-intro">Five interactive museum installations built from scratch for the Gallipoli Historical Site (SITULA Informatics, 2021 to 2025), including a published iOS and Android companion app.</p>
+      <div class="assets-grid">
+        <div class="asset-item">
+          <h3>Kilitbahir Stronghold VR Tour</h3>
+          <iframe src="https://www.youtube.com/embed/DvBHgOJslgk" title="Kilitbahir Stronghold VR tour video" style="width:100%; aspect-ratio: 16/9; border:0;" allowfullscreen loading="lazy"></iframe>
+          <p class="meta">Role: Unity developer · Tech: Unity, VR, optimized high-fidelity 3D</p>
+          <p>Virtual reality walkthrough of the Kilitbahir fortress with rendering and memory optimization for standalone headsets.</p>
+        </div>
+        <div class="asset-item">
+          <h3>Kiosk: Ottoman to Turkish Translator</h3>
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973711734532390912?compact=1"
+            style="width: 100%; min-height: 450px; border: 0;" title="LinkedIn post: Ottoman to Turkish translator kiosk" loading="lazy"></iframe>
+          <p class="meta">Role: Unity developer · Tech: Unity, touch kiosk, email export</p>
+          <p>Interactive kiosk for the War History Research Center, Dardanelles: visitors translate Ottoman text and receive screenshots by email.</p>
+        </div>
+        <div class="asset-item">
+          <h3>Kiosk: Map Database &amp; Inspection</h3>
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973710806240636928?compact=1"
+            style="width: 100%; min-height: 450px; border: 0;" title="LinkedIn post: map database kiosk" loading="lazy"></iframe>
+          <p class="meta">Role: Unity developer · Tech: Unity, touch kiosk, map database</p>
+          <p>Touch-screen kiosk for browsing and inspecting First World War maps of the Gallipoli campaign.</p>
+        </div>
+      </div>
+    </section>
 
     <section id="assets" class="card">
-      <h2>Game Assets</h2>
-      <div class="assets-grid" id="assets-list"> 
-                <!-- 3M RTS Units - YENİ REDDIT VIDEO -->
+      <h2>Tech Demos &amp; Game Assets</h2>
+      <div class="assets-grid" id="assets-list">
         <div class="asset-item">
-          <h3>3 Million RTS Units</h3>
+          <h3>3 Million RTS Units on the GPU</h3>
           <blockquote class="reddit-embed-bq" style="height:600px" data-embed-height="600">
             <a href="https://www.reddit.com/r/Unity3D/comments/1r6a1ho/3_million_interactive_units_moving_from_ecs_to/">3 Million interactive units. Moving from ECS to GPU-driven logic for full RTS control.</a><br> by
             <a href="https://www.reddit.com/user/OkLuck7900/">u/OkLuck7900</a> in
             <a href="https://www.reddit.com/r/Unity3D/">Unity3D</a>
           </blockquote>
-          <p>3M animated units with GPU-driven RTS logic</p>
+          <p class="meta">Tech: Compute Shaders (GPGPU), Unity, C#</p>
+          <p>3,000,000+ units and projectiles simulated and animated entirely on the GPU with full RTS selection and control. Logic moved from ECS to compute for another order of magnitude in scale.</p>
         </div>
         <div class="asset-item">
-          <iframe src="https://embed.reddit.com/r/Unity3D/comments/1q1g3kj/50000_animated_enemies_massive_update_to_my_dots/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" style="width: 100%; aspect-ratio: 16/9; border: 0;" sandbox="allow-scripts allow-same-origin allow-popups" allowfullscreen loading="lazy"></iframe>
-          <p>50,000 Animated Enemies - DOTS System</p>
+          <h3>75,000 Animated NPCs with DOTS</h3>
+          <iframe src="https://embed.reddit.com/r/Unity3D/comments/1q1g3kj/50000_animated_enemies_massive_update_to_my_dots/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" title="Reddit post: 50,000 animated enemies DOTS system" style="width: 100%; aspect-ratio: 16/9; border: 0;" sandbox="allow-scripts allow-same-origin allow-popups" allowfullscreen loading="lazy"></iframe>
+          <p class="meta">Tech: Unity DOTS (ECS, Job System, Burst) · Built for the Unity Asset Store</p>
+          <p>High-performance NPC framework handling 75,000+ animated enemies with complex logic. Shown here at the 50,000-enemy milestone.</p>
         </div>
         <div class="asset-item">
-         <iframe src="https://www.youtube.com/embed/R0SmPE_PUdM" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
-          <p>Asset Video - Office Animals 3D</p>
+          <h3>Office Animals 3D</h3>
+          <iframe src="https://www.youtube.com/embed/R0SmPE_PUdM" title="Office Animals 3D asset pack video" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
+          <p class="meta">Tech: 3D asset pack, Unity</p>
+          <p>Stylized 3D character asset pack, rigged and animated for Unity.</p>
         </div>
       </div>
     </section>
@@ -198,7 +276,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Gorilli Games. All rights reserved.
+    &copy; 2026 Cem Yılmaz · <a href="mailto:cemtas81@gmail.com">cemtas81@gmail.com</a> · Ankara, Türkiye
   </footer>
   <script async src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
 </body>

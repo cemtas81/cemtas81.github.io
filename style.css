@@ -232,3 +232,31 @@ a:focus { outline: 3px solid rgba(25,255,242,0.12); outline-offset: 2px; }
   .ps-title { font-size: 0.95rem; }
   .ps-sub { font-size: 0.8rem; }
 }
+
+/* --- Hero, contact bar, project meta (added 2026-09) --- */
+.brand { display: inline-block; }
+.hero h1 { font-size: 2.2rem; margin-bottom: 0.25rem; letter-spacing: 1px; }
+.hero-title { color: #9fb1b7; font-size: 1.05rem; margin: 0 0 1rem 0; }
+.hero-summary { font-size: 1rem; line-height: 1.6; margin: 0 0 1.25rem 0; }
+.contact-bar { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.contact-bar a {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: background 0.15s, color 0.15s;
+}
+.contact-bar a:hover { background: var(--primary); color: var(--secondary); }
+.section-intro { color: #9fb1b7; margin-top: -0.5rem; }
+.skills, .timeline { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
+.skills li, .timeline li { padding: 0.35rem 0; line-height: 1.5; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.timeline .when { display: inline-block; min-width: 9.5rem; color: var(--primary); }
+.meta { color: #9fb1b7; font-size: 0.85rem; margin: 0.25rem 0; text-align: center; }
+.game-item p, .asset-item p { line-height: 1.5; }
+@media (max-width: 700px) {
+  .hero h1 { font-size: 1.6rem; }
+  .timeline .when { display: block; min-width: 0; }
+}
