@@ -120,45 +120,54 @@ main {
 .item p:last-child { margin-bottom: 0; }
 .meta { color: var(--muted); font-size: .82rem; margin: .5rem 0 .6rem; }
 
-/* ---------- click-to-load embeds ---------- */
+/* ---------- video &  post embeds (load normally) ---------- */
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+.video-vertical { aspect-ratio: 9 / 16; }
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+.post {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+.post iframe { width: 100%; min-height: 520px; border: 0; display: block; }
+
+/* showreel sits on its own row at its natural vertical ratio */
+.reel-wrap { max-width: 300px; margin: 1rem auto 0; }
+
+/* ---------- playable games: tap to play ---------- */
 .embed {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .6rem;
+  gap: .9rem;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 1px solid var(--line);
+  border: 2px solid var(--primary);
   border-radius: 10px;
-  background-color: #0d0f14;
-  background-size: cover;
-  background-position: center;
+  background: radial-gradient(circle at 50% 42%, #1d2b33 0%, #10141a 70%);
   color: var(--text);
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   padding: 0;
   font: inherit;
-  transition: border-color .15s;
+  transition: background .15s, box-shadow .15s;
 }
-.embed::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10,12,16,.35), rgba(10,12,16,.72));
-  transition: background .15s;
-}
-.embed:hover { border-color: var(--primary); }
-.embed:hover::after { background: linear-gradient(180deg, rgba(10,12,16,.15), rgba(10,12,16,.55)); }
-.embed > * { position: relative; z-index: 1; }
+.embed:hover { box-shadow: 0 0 0 4px rgba(25,255,242,.16); }
 
 .play-icon {
-  width: 56px;
-  height: 56px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
-  border: 2px solid var(--primary);
-  background: rgba(13,15,20,.65);
+  border: 3px solid var(--primary);
+  background: rgba(13,15,20,.6);
   display: grid;
   place-items: center;
   transition: background .15s, transform .15s;
@@ -166,16 +175,20 @@ main {
 .play-icon::before {
   content: "";
   border-style: solid;
-  border-width: 11px 0 11px 18px;
+  border-width: 15px 0 15px 25px;
   border-color: transparent transparent transparent var(--primary);
-  margin-left: 5px;
+  margin-left: 7px;
 }
-.embed:hover .play-icon { background: var(--primary); transform: scale(1.06); }
+.embed:hover .play-icon { background: var(--primary); transform: scale(1.07); }
 .embed:hover .play-icon::before { border-left-color: var(--secondary); }
 
-.embed-cta { font-size: .85rem; font-weight: 700; color: var(--primary); text-shadow: 0 1px 4px #000; }
-.embed-plain { background-image: linear-gradient(140deg, #1c2430, #12161d); }
-.embed-vertical { aspect-ratio: 9 / 16; }
+.embed-cta {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
 
 /* the iframe that replaces the button keeps the same box */
 .embed-loaded {
@@ -185,12 +198,7 @@ main {
   overflow: hidden;
   background: #000;
 }
-.embed-loaded.embed-vertical { aspect-ratio: 9 / 16; }
-.embed-loaded.embed-plain { aspect-ratio: auto; min-height: 460px; }
-.embed-loaded iframe { width: 100%; height: 100%; border: 0; display: block; min-height: inherit; }
-
-/* showreel sits on its own row, not in the 16:9 grid */
-.reel-wrap { max-width: 290px; margin: 1rem auto 0; }
+.embed-loaded iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 /* ---------- Google Play card ---------- */
 .playstore-preview { display: flex; justify-content: center; padding: 1.25rem; }
@@ -234,5 +242,7 @@ footer {
   .card { padding: 1.25rem; }
   .grid { grid-template-columns: 1fr; }
   .timeline .when { display: block; min-width: 0; }
-  .play-icon { width: 46px; height: 46px; }
+  .play-icon { width: 60px; height: 60px; }
+  .embed-cta { font-size: 1rem; }
+  .post iframe { min-height: 460px; }
 }
