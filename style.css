@@ -143,6 +143,10 @@ main {
 .reel-wrap { max-width: 300px; margin: 1rem auto 0; }
 
 /* ---------- playable games: tap to play ---------- */
+/* Unity canvases are a fixed 435x390 (380x380), so the box must never be smaller. */
+.games-grid { grid-template-columns: repeat(auto-fit, minmax(470px, 1fr)); }
+.embed, .embed-loaded { aspect-ratio: 1.15 / 1; min-height: 430px; }
+
 .embed {
   display: flex;
   flex-direction: column;
@@ -150,7 +154,6 @@ main {
   justify-content: center;
   gap: .9rem;
   width: 100%;
-  aspect-ratio: 16 / 9;
   border: 2px solid var(--primary);
   border-radius: 10px;
   background: radial-gradient(circle at 50% 42%, #1d2b33 0%, #10141a 70%);
@@ -193,12 +196,11 @@ main {
 /* the iframe that replaces the button keeps the same box */
 .embed-loaded {
   width: 100%;
-  aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
   background: #000;
 }
-.embed-loaded iframe { width: 100%; height: 100%; border: 0; display: block; }
+.embed-loaded iframe { width: 100%; height: 100%; min-height: 430px; border: 0; display: block; }
 
 /* ---------- Google Play card ---------- */
 .playstore-preview { display: flex; justify-content: center; padding: 1.25rem; }
@@ -240,7 +242,7 @@ footer {
   .logo { height: 48px; }
   main { padding: 0 .75rem; }
   .card { padding: 1.25rem; }
-  .grid { grid-template-columns: 1fr; }
+  .grid, .games-grid { grid-template-columns: 1fr; }
   .timeline .when { display: block; min-width: 0; }
   .play-icon { width: 60px; height: 60px; }
   .embed-cta { font-size: 1rem; }
