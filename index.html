@@ -65,6 +65,8 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -84,7 +86,7 @@
 
   <main id="top">
 
-    <!-- Hero: name, title, contact -->
+    <!-- Hero -->
     <section id="hero" class="card hero">
       <h1>Cem Yılmaz</h1>
       <p class="hero-title">Lead Unity Developer · Unity DOTS/ECS &amp; Compute Shaders · Ankara, Türkiye</p>
@@ -97,26 +99,24 @@
         <a href="mailto:cemtas81@gmail.com">✉ cemtas81@gmail.com</a>
         <a href="https://www.linkedin.com/in/cem-yılmaz-870501114" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/cemtas81" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="Cem_Yilmaz_CV%20(1).pdf" target="_blank" rel="noopener" download>Download CV (PDF)</a>
+        <a href="Cem_Yilmaz_CV%20(1).pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
         <a href="https://play.google.com/store/apps/developer?id=Gorilli+Games" target="_blank" rel="noopener noreferrer">Google Play</a>
       </div>
     </section>
 
-    <!-- Play Store small preview -->
+    <!-- Play Store -->
     <section id="playstore-games" class="card playstore-preview" aria-label="Gorilli Games on Google Play">
-      <div class="ps-grid">
-        <a class="ps-card-link" href="https://play.google.com/store/apps/developer?id=Gorilli+Games"
-           target="_blank" rel="noopener noreferrer" aria-label="Gorilli Games on Google Play">
-          <article class="ps-card">
-            <img src="logo.png" alt="Gorilli Games developer page on Google Play" class="ps-thumb">
-            <div class="ps-overlay">
-              <div class="ps-title">Gorilli Games</div>
-              <div class="ps-sub">10+ published games on Google Play</div>
-              <img class="ps-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play">
-            </div>
-          </article>
-        </a>
-      </div>
+      <a class="ps-card-link" href="https://play.google.com/store/apps/developer?id=Gorilli+Games"
+         target="_blank" rel="noopener noreferrer">
+        <article class="ps-card">
+          <img src="logo.png" alt="Gorilli Games developer page on Google Play" class="ps-thumb">
+          <div class="ps-overlay">
+            <div class="ps-title">Gorilli Games</div>
+            <div class="ps-sub">10+ published games on Google Play</div>
+            <img class="ps-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" loading="lazy">
+          </div>
+        </article>
+      </a>
     </section>
 
     <section id="about" class="card">
@@ -145,131 +145,167 @@
       </ul>
     </section>
 
+    <!-- Showreel: vertical, own row, out of the games grid -->
+    <section id="showreel" class="card reel-section">
+      <h2>Showreel</h2>
+      <p class="section-intro">A short reel of recent mobile releases.</p>
+      <div class="reel-wrap">
+        <button class="embed embed-vertical" type="button"
+                data-src="https://www.youtube.com/embed/0_pbJQ1nvWg?autoplay=1"
+                data-title="Gorilli Games gameplay showcase"
+                style="background-image:url('https://img.youtube.com/vi/0_pbJQ1nvWg/hqdefault.jpg')">
+          <span class="play-icon" aria-hidden="true"></span>
+          <span class="embed-cta">Play showreel</span>
+        </button>
+      </div>
+    </section>
+
     <section id="games" class="card">
       <h2>Playable Games (WebGL)</h2>
-      <p class="section-intro">Play directly in the browser. All builds are Unity WebGL, exported from the same codebase used for the mobile releases.</p>
-      <div class="games-grid" id="games-list">
-        <div class="game-item" style="width: 100%; max-width: 400px; margin: 30px auto;">
-          <h3>🎮 Gameplay Showcase</h3>
-          <div style="width: 100%; height: 640px; background: #000; border-radius: 8px; overflow: hidden; position: relative;">
-            <iframe
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-              src="https://www.youtube.com/embed/0_pbJQ1nvWg"
-              title="Gorilli Games gameplay showcase video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              loading="lazy">
-            </iframe>
-          </div>
-          <p>Short gameplay reel of recent mobile releases published under Gorilli Games.</p>
-        </div>
-        <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
+      <p class="section-intro">Unity WebGL builds, exported from the same codebase as the mobile releases. Click a card to load and play it in the browser.</p>
+      <div class="grid">
+        <article class="item">
           <h3>Parking Jam</h3>
-          <iframe
-            src="ParkingJam/index.html"
-            title="Parking Jam, playable Unity WebGL build"
-            style="width: 100%; height: 100%; min-height: 400px; border: 0;"
-            allowfullscreen loading="lazy">
-          </iframe>
-          <p class="meta">Role: solo developer · Tech: Unity, C#, WebGL · Published on Google Play</p>
+          <button class="embed embed-game" type="button"
+                  data-src="ParkingJam/index.html"
+                  data-title="Parking Jam, playable Unity WebGL build">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="embed-cta">Play in browser</span>
+          </button>
+          <p class="meta">Solo developer · Unity, C#, WebGL · Published on Google Play</p>
           <p>Car-parking puzzle: clear the lot without blocking any car. Grid-based movement logic, level generator and a WebGL build optimized for fast load.</p>
-        </div>
-        <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
+        </article>
+        <article class="item">
           <h3>Card Match</h3>
-          <iframe
-            src="CardMatch/index.html"
-            title="Card Match, playable Unity WebGL build"
-            style="width: 100%; height: 100%; min-height: 400px; border: 0;"
-            allowfullscreen loading="lazy">
-          </iframe>
-          <p class="meta">Role: solo developer · Tech: Unity, C#, WebGL</p>
+          <button class="embed embed-game" type="button"
+                  data-src="CardMatch/index.html"
+                  data-title="Card Match, playable Unity WebGL build">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="embed-cta">Play in browser</span>
+          </button>
+          <p class="meta">Solo developer · Unity, C#, WebGL</p>
           <p>Timed memory card game. Object pooling, state-driven UI and audio muting for embedded play.</p>
-        </div>
-        <div class="game-item" style="width: 100%; aspect-ratio: 16/9; max-width: 1000px; margin: auto;">
+        </article>
+        <article class="item">
           <h3>Match &amp; Cook</h3>
-          <iframe
-            src="WebBuild/index.html"
-            title="Match and Cook, playable Unity WebGL build"
-            style="width: 100%; height: 100%; min-height: 400px; border: 0;"
-            allowfullscreen loading="lazy">
-          </iframe>
-          <p class="meta">Role: solo developer · Tech: Unity, C#, WebGL</p>
+          <button class="embed embed-game" type="button"
+                  data-src="WebBuild/index.html"
+                  data-title="Match and Cook, playable Unity WebGL build">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="embed-cta">Play in browser</span>
+          </button>
+          <p class="meta">Solo developer · Unity, C#, WebGL</p>
           <p>Match-3 with a cooking meta layer: matched ingredients feed recipes and unlock levels. Demo build of the mobile game.</p>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="pc-games" class="card">
       <h2>PC Games</h2>
-      <div class="assets-grid">
-        <div class="asset-item">
+      <div class="grid">
+        <article class="item">
           <h3>Open World Hack &amp; Slash</h3>
-          <iframe src="https://www.youtube.com/embed/31aKcRl42ig" title="Open World Hack and Slash gameplay video" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
-          <p class="meta">Role: solo developer · Tech: Unity, C#, NavMesh, DOTS</p>
+          <button class="embed" type="button"
+                  data-src="https://www.youtube.com/embed/31aKcRl42ig?autoplay=1"
+                  data-title="Open World Hack and Slash gameplay video"
+                  style="background-image:url('https://img.youtube.com/vi/31aKcRl42ig/hqdefault.jpg')">
+            <span class="play-icon" aria-hidden="true"></span>
+          </button>
+          <p class="meta">Solo developer · Unity, C#, NavMesh, DOTS</p>
           <p>Fast-paced action prototype running up to 1,000 enemy units simultaneously with navigation and avoidance, without dropping frames.</p>
-        </div>
-        <div class="asset-item">
+        </article>
+        <article class="item">
           <h3>Color Maze Puzzle with Mystery</h3>
-          <iframe src="https://www.youtube.com/embed/NMakyOjBbIc" title="Color Maze Puzzle gameplay video" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
-          <p class="meta">Role: solo developer · Tech: Unity, C# · Platform: Steam</p>
+          <button class="embed" type="button"
+                  data-src="https://www.youtube.com/embed/NMakyOjBbIc?autoplay=1"
+                  data-title="Color Maze Puzzle gameplay video"
+                  style="background-image:url('https://img.youtube.com/vi/NMakyOjBbIc/hqdefault.jpg')">
+            <span class="play-icon" aria-hidden="true"></span>
+          </button>
+          <p class="meta">Solo developer · Unity, C# · Platform: Steam</p>
           <p>Space-themed 3D maze puzzle with hidden mechanics, obstacles, a skin and item shop. Full Steam publishing cycle handled end to end.</p>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="vr-kiosk" class="card">
       <h2>VR &amp; Kiosk Projects</h2>
       <p class="section-intro">Five interactive museum installations built from scratch for the Gallipoli Historical Site (SITULA Informatics, 2021 to 2025), including a published iOS and Android companion app.</p>
-      <div class="assets-grid">
-        <div class="asset-item">
+      <div class="grid">
+        <article class="item">
           <h3>Kilitbahir Stronghold VR Tour</h3>
-          <iframe src="https://www.youtube.com/embed/DvBHgOJslgk" title="Kilitbahir Stronghold VR tour video" style="width:100%; aspect-ratio: 16/9; border:0;" allowfullscreen loading="lazy"></iframe>
-          <p class="meta">Role: Unity developer · Tech: Unity, VR, optimized high-fidelity 3D</p>
+          <button class="embed" type="button"
+                  data-src="https://www.youtube.com/embed/DvBHgOJslgk?autoplay=1"
+                  data-title="Kilitbahir Stronghold VR tour video"
+                  style="background-image:url('https://img.youtube.com/vi/DvBHgOJslgk/hqdefault.jpg')">
+            <span class="play-icon" aria-hidden="true"></span>
+          </button>
+          <p class="meta">Unity developer · Unity, VR, optimized high-fidelity 3D</p>
           <p>Virtual reality walkthrough of the Kilitbahir fortress with rendering and memory optimization for standalone headsets.</p>
-        </div>
-        <div class="asset-item">
+        </article>
+        <article class="item">
           <h3>Kiosk: Ottoman to Turkish Translator</h3>
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973711734532390912?compact=1"
-            style="width: 100%; min-height: 450px; border: 0;" title="LinkedIn post: Ottoman to Turkish translator kiosk" loading="lazy"></iframe>
-          <p class="meta">Role: Unity developer · Tech: Unity, touch kiosk, email export</p>
+          <button class="embed embed-plain" type="button"
+                  data-src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973711734532390912?compact=1"
+                  data-title="LinkedIn post: Ottoman to Turkish translator kiosk">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="embed-cta">Load LinkedIn post</span>
+          </button>
+          <p class="meta">Unity developer · Unity, touch kiosk, email export</p>
           <p>Interactive kiosk for the War History Research Center, Dardanelles: visitors translate Ottoman text and receive screenshots by email.</p>
-        </div>
-        <div class="asset-item">
+        </article>
+        <article class="item">
           <h3>Kiosk: Map Database &amp; Inspection</h3>
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973710806240636928?compact=1"
-            style="width: 100%; min-height: 450px; border: 0;" title="LinkedIn post: map database kiosk" loading="lazy"></iframe>
-          <p class="meta">Role: Unity developer · Tech: Unity, touch kiosk, map database</p>
+          <button class="embed embed-plain" type="button"
+                  data-src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6973710806240636928?compact=1"
+                  data-title="LinkedIn post: map database kiosk">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="embed-cta">Load LinkedIn post</span>
+          </button>
+          <p class="meta">Unity developer · Unity, touch kiosk, map database</p>
           <p>Touch-screen kiosk for browsing and inspecting First World War maps of the Gallipoli campaign.</p>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="assets" class="card">
       <h2>Tech Demos &amp; Game Assets</h2>
-      <div class="assets-grid" id="assets-list">
-        <div class="asset-item">
+      <div class="grid">
+        <article class="item">
           <h3>3 Million RTS Units on the GPU</h3>
-          <blockquote class="reddit-embed-bq" style="height:600px" data-embed-height="600">
-            <a href="https://www.reddit.com/r/Unity3D/comments/1r6a1ho/3_million_interactive_units_moving_from_ecs_to/">3 Million interactive units. Moving from ECS to GPU-driven logic for full RTS control.</a><br> by
-            <a href="https://www.reddit.com/user/OkLuck7900/">u/OkLuck7900</a> in
-            <a href="https://www.reddit.com/r/Unity3D/">Unity3D</a>
-          </blockquote>
-          <p class="meta">Tech: Compute Shaders (GPGPU), Unity, C#</p>
+          <button class="embed embed-plain" type="button"
+                  data-src="https://embed.reddit.com/r/Unity3D/comments/1r6a1ho/3_million_interactive_units_moving_from_ecs_to/?embed=true&amp;theme=dark"
+                  data-title="Reddit post: 3 million interactive units">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="embed-cta">Load Reddit post</span>
+          </button>
+          <p class="meta">Compute Shaders (GPGPU), Unity, C#</p>
           <p>3,000,000+ units and projectiles simulated and animated entirely on the GPU with full RTS selection and control. Logic moved from ECS to compute for another order of magnitude in scale.</p>
-        </div>
-        <div class="asset-item">
+          <p><a href="https://www.reddit.com/r/Unity3D/comments/1r6a1ho/3_million_interactive_units_moving_from_ecs_to/" target="_blank" rel="noopener noreferrer">Open discussion on Reddit</a></p>
+        </article>
+        <article class="item">
           <h3>75,000 Animated NPCs with DOTS</h3>
-          <iframe src="https://embed.reddit.com/r/Unity3D/comments/1q1g3kj/50000_animated_enemies_massive_update_to_my_dots/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" title="Reddit post: 50,000 animated enemies DOTS system" style="width: 100%; aspect-ratio: 16/9; border: 0;" sandbox="allow-scripts allow-same-origin allow-popups" allowfullscreen loading="lazy"></iframe>
-          <p class="meta">Tech: Unity DOTS (ECS, Job System, Burst) · Built for the Unity Asset Store</p>
+          <button class="embed embed-plain" type="button"
+                  data-src="https://embed.reddit.com/r/Unity3D/comments/1q1g3kj/50000_animated_enemies_massive_update_to_my_dots/?embed=true&amp;theme=dark"
+                  data-title="Reddit post: 50,000 animated enemies DOTS system">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span class="embed-cta">Load Reddit post</span>
+          </button>
+          <p class="meta">Unity DOTS (ECS, Job System, Burst) · Built for the Unity Asset Store</p>
           <p>High-performance NPC framework handling 75,000+ animated enemies with complex logic. Shown here at the 50,000-enemy milestone.</p>
-        </div>
-        <div class="asset-item">
+          <p><a href="https://www.reddit.com/r/Unity3D/comments/1q1g3kj/50000_animated_enemies_massive_update_to_my_dots/" target="_blank" rel="noopener noreferrer">Open discussion on Reddit</a></p>
+        </article>
+        <article class="item">
           <h3>Office Animals 3D</h3>
-          <iframe src="https://www.youtube.com/embed/R0SmPE_PUdM" title="Office Animals 3D asset pack video" style="width: 100%; aspect-ratio: 16/9; border: 0;" allowfullscreen loading="lazy"></iframe>
-          <p class="meta">Tech: 3D asset pack, Unity</p>
+          <button class="embed" type="button"
+                  data-src="https://www.youtube.com/embed/R0SmPE_PUdM?autoplay=1"
+                  data-title="Office Animals 3D asset pack video"
+                  style="background-image:url('https://img.youtube.com/vi/R0SmPE_PUdM/hqdefault.jpg')">
+            <span class="play-icon" aria-hidden="true"></span>
+          </button>
+          <p class="meta">3D asset pack, Unity</p>
           <p>Stylized 3D character asset pack, rigged and animated for Unity.</p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -278,6 +314,23 @@
   <footer>
     &copy; 2026 Cem Yılmaz · <a href="mailto:cemtas81@gmail.com">cemtas81@gmail.com</a> · Ankara, Türkiye
   </footer>
-  <script async src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
+
+  <script>
+  // Click-to-load embeds: nothing heavy is fetched until the visitor asks for it.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.embed') : null;
+    if (!btn) return;
+    var wrap = document.createElement('div');
+    wrap.className = btn.className.replace('embed', 'embed-loaded');
+    var f = document.createElement('iframe');
+    f.src = btn.getAttribute('data-src');
+    f.title = btn.getAttribute('data-title') || '';
+    f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    f.setAttribute('allowfullscreen', '');
+    f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    wrap.appendChild(f);
+    btn.parentNode.replaceChild(wrap, btn);
+  });
+  </script>
 </body>
 </html>
