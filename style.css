@@ -224,6 +224,23 @@ main {
 .ps-sub { color: var(--muted); font-size: .85rem; margin: .15rem 0 .45rem; }
 .ps-badge { height: 30px; display: block; }
 
+/* Multiple store cards side by side (Gorilli Games, Bleis Interactive, ...) */
+.playstore-preview { flex-wrap: wrap; gap: 1rem; }
+.ps-badges { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.ps-badge.ps-badge-apple { height: 20px; }
+.ps-thumb-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1b2a3a, #2c1f3f);
+  color: var(--text);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: 1px;
+}
+
 /* ---------- footer ---------- */
 footer {
   text-align: center;
